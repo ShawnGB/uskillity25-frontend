@@ -33,7 +33,6 @@ const Button = ({
     : variant || "primary";
 
   const baseStyle = {
-    borderRadius: "18px",
     fontSize: size === "lg" ? "1.0625rem" : size === "sm" ? "0.875rem" : "1rem",
     fontFamily: "var(--font-sans)",
     fontWeight: 600,
@@ -75,7 +74,7 @@ const Button = ({
 
   return (
     <motion.button
-      className={`${variantClass} ${className}`}
+      className={`${variantClass} rounded-button ${className}`}
       style={finalStyle}
       onClick={onSubmit}
       whileHover={{ scale: 1.02 }}

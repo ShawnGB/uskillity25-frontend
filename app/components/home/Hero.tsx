@@ -169,7 +169,13 @@ export default function Hero(): ReactNode {
                     color: "var(--color-text-warm)",
                   }}
                 >
-                  <span className="gradient-text-primary" style={{ fontWeight: 600, filter: "drop-shadow(0 1px 2px rgba(214, 52, 71, 0.1))" }}>
+                  <span
+                    className="gradient-text-primary"
+                    style={{
+                      fontWeight: 600,
+                      filter: "drop-shadow(0 1px 2px rgba(214, 52, 71, 0.1))",
+                    }}
+                  >
                     u/skillity
                   </span>{" "}
                   helps people rediscover their creativity — and through it,

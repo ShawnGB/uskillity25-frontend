@@ -116,10 +116,10 @@ export function CreativeRealms() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-4 text-xl" style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--color-text-blue)', lineHeight: 1.3 }}>
+                  <h3 className="mb-4 text-xl text-card-title">
                     {realm.name}
                   </h3>
-                  <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)', lineHeight: 1.7 }}>
+                  <p className="text-body-standard">
                     {realm.tagline}
                   </p>
                 </div>
@@ -130,8 +130,7 @@ export function CreativeRealms() {
 
         {/* Footer note */}
         <motion.p
-          className="text-center mt-12"
-          style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)', lineHeight: 1.7 }}
+          className="text-center mt-12 text-body-standard"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

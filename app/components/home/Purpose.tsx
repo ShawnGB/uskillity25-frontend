@@ -126,10 +126,10 @@ export function Purpose() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-4 text-xl" style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--color-text-blue)', lineHeight: 1.3 }}>
+                  <h3 className="mb-4 text-xl text-card-title">
                     {point.title}
                   </h3>
-                  <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)', lineHeight: 1.7 }}>
+                  <p className="text-body-standard">
                     {point.description}
                   </p>
                 </div>

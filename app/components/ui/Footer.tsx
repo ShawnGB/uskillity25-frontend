@@ -34,28 +34,22 @@ export function Footer() {
           <nav className="flex flex-wrap justify-center gap-6">
             <a
               href="#about"
-              className="transition-all hover:scale-110 text-sm"
+              className="transition-all hover:scale-110 text-sm link-hover-primary"
               style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               About
             </a>
             <a
               href="#contact"
-              className="transition-all hover:scale-110 text-sm"
+              className="transition-all hover:scale-110 text-sm link-hover-primary"
               style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               Contact
             </a>
             <a
               href="#privacy"
-              className="transition-all hover:scale-110 text-sm"
+              className="transition-all hover:scale-110 text-sm link-hover-primary"
               style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               Privacy
             </a>
