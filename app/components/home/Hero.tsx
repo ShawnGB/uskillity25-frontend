@@ -76,7 +76,7 @@ export default function Hero(): ReactNode {
                 <h1
                   className="text-7xl sm:text-8xl lg:text-[8rem] xl:text-[8.5rem]"
                   style={{
-                    fontFamily: "Crimson Pro, Georgia, serif",
+                    fontFamily: "var(--font-serif)",
                     fontWeight: 600,
                     lineHeight: 1.1,
                     letterSpacing: "0.005em",
@@ -86,8 +86,8 @@ export default function Hero(): ReactNode {
                   <span
                     className="block mb-0 relative"
                     style={{
-                      fontFamily: "Manrope, sans-serif",
-                      color: "#1E3A5F",
+                      fontFamily: "var(--font-sans)",
+                      color: "var(--color-text-blue)",
                       fontWeight: 800,
                       fontSize: "0.43em",
                       letterSpacing: "0.12em",
@@ -121,8 +121,8 @@ export default function Hero(): ReactNode {
                     className="block -mt-2 relative"
                     style={{
                       marginTop: "-2rem",
-                      fontFamily: "Manrope, sans-serif",
-                      color: "#1E3A5F",
+                      fontFamily: "var(--font-sans)",
+                      color: "var(--color-text-blue)",
                       fontWeight: 800,
                       fontSize: "0.43em",
                       letterSpacing: "0.12em",
@@ -162,24 +162,14 @@ export default function Hero(): ReactNode {
                 <p
                   className="text-xl"
                   style={{
-                    fontFamily: "Manrope, sans-serif",
+                    fontFamily: "var(--font-sans)",
                     fontWeight: 400,
                     lineHeight: 1.7,
                     letterSpacing: "0.015em",
-                    color: "#5A3D3A",
+                    color: "var(--color-text-warm)",
                   }}
                 >
-                  <span
-                    style={{
-                      background:
-                        "linear-gradient(90deg, #E8495F 0%, #D63447 25%, #D63447 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                      fontWeight: 600,
-                      filter: "drop-shadow(0 1px 2px rgba(214, 52, 71, 0.1))",
-                    }}
-                  >
+                  <span className="gradient-text-primary" style={{ fontWeight: 600, filter: "drop-shadow(0 1px 2px rgba(214, 52, 71, 0.1))" }}>
                     u/skillity
                   </span>{" "}
                   helps people rediscover their creativity — and through it,

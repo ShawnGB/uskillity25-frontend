@@ -3,9 +3,9 @@ import { Heart } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-t border-[#7A6F67]/10">
+    <footer className="py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-t" style={{ borderColor: 'var(--border)' }}>
       {/* Warm gradient background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#FFFFFF] to-[#FBF6F2]" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-white to-[var(--background)]" />
 
       {/* Subtle warm overlay */}
       <div
@@ -17,16 +17,16 @@ export function Footer() {
 
       {/* Playful background accents */}
       <div className="absolute inset-0 z-[2] opacity-15">
-        <div className="absolute bottom-0 left-[20%] w-56 h-56 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(247, 123, 114, 0.5), transparent)' }}></div>
-        <div className="absolute bottom-0 right-[20%] w-56 h-56 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(188, 167, 232, 0.5), transparent)' }}></div>
+        <div className="absolute bottom-0 left-[20%] w-56 h-56 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, var(--color-art), transparent)' }}></div>
+        <div className="absolute bottom-0 right-[20%] w-56 h-56 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, var(--color-mind), transparent)' }}></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-8">
           <div className="flex items-center gap-3">
             <Logo className="h-6 w-auto" />
-            <div className="w-1 h-1 rounded-full bg-[#D63447]"></div>
-            <span className="text-[#7A6F67] text-sm italic" style={{ fontFamily: 'var(--font-serif)' }}>
+            <div className="w-1 h-1 rounded-full" style={{ backgroundColor: 'var(--primary)' }}></div>
+            <span className="text-sm italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--muted-foreground)' }}>
               where creativity lives
             </span>
           </div>
@@ -34,22 +34,28 @@ export function Footer() {
           <nav className="flex flex-wrap justify-center gap-6">
             <a
               href="#about"
-              className="text-[#7A6F67] hover:text-[#D63447] transition-all hover:scale-110 text-sm"
-              style={{ fontFamily: 'var(--font-sans)' }}
+              className="transition-all hover:scale-110 text-sm"
+              style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               About
             </a>
             <a
               href="#contact"
-              className="text-[#7A6F67] hover:text-[#D63447] transition-all hover:scale-110 text-sm"
-              style={{ fontFamily: 'var(--font-sans)' }}
+              className="transition-all hover:scale-110 text-sm"
+              style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               Contact
             </a>
             <a
               href="#privacy"
-              className="text-[#7A6F67] hover:text-[#D63447] transition-all hover:scale-110 text-sm"
-              style={{ fontFamily: 'var(--font-sans)' }}
+              className="transition-all hover:scale-110 text-sm"
+              style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
             >
               Privacy
             </a>
@@ -58,22 +64,22 @@ export function Footer() {
 
         {/* Playful divider */}
         <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-[#D63447]/30 rounded-full"></div>
+          <div className="w-16 h-0.5 rounded-full" style={{ background: 'linear-gradient(to right, transparent, rgba(214, 52, 71, 0.3))' }}></div>
           <div className="flex gap-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#F77B72]/40"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#F3C97B]/40"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#BCA7E8]/40"></div>
+            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--color-art)', opacity: 0.4 }}></div>
+            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--color-community)', opacity: 0.4 }}></div>
+            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--color-mind)', opacity: 0.4 }}></div>
           </div>
-          <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-[#D63447]/30 rounded-full"></div>
+          <div className="w-16 h-0.5 rounded-full" style={{ background: 'linear-gradient(to left, transparent, rgba(214, 52, 71, 0.3))' }}></div>
         </div>
 
         <div className="text-center">
-          <p className="text-[#7A6F67] text-sm flex items-center justify-center gap-2 flex-wrap" style={{ fontFamily: 'var(--font-sans)' }}>
+          <p className="text-sm flex items-center justify-center gap-2 flex-wrap" style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)' }}>
             © {new Date().getFullYear()} u/skillity
-            <span className="text-[#7A6F67]/50">•</span>
+            <span style={{ opacity: 0.5 }}>•</span>
             <span className="flex items-center gap-1.5 italic" style={{ fontFamily: 'var(--font-serif)' }}>
               Made with
-              <Heart className="w-3.5 h-3.5 text-[#F77B72] fill-[#F77B72] animate-pulse" />
+              <Heart className="w-3.5 h-3.5 animate-pulse" style={{ color: 'var(--color-art)', fill: 'var(--color-art)' }} />
               for creators
             </span>
           </p>

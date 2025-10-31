@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { TrendingDown, Smartphone, Bot, Heart, Users, Flame } from "lucide-react";
+import { FloatingShapes } from "~/components/ui/FloatingShapes";
+import { SectionHeading } from "~/components/ui/SectionHeading";
 
 const points = [
   {
@@ -40,86 +42,64 @@ const points = [
   },
 ];
 
+const floatingShapes = [
+  {
+    color: "rgba(247, 123, 114, 0.5)",
+    size: "16rem",
+    position: { top: "2.5rem", left: "10%" },
+    duration: 8,
+    delay: 0,
+    opacity: [0.3, 0.5, 0.3],
+    scale: [1, 1.2, 1],
+  },
+  {
+    color: "rgba(145, 181, 156, 0.45)",
+    size: "20rem",
+    position: { top: "25%", right: "15%" },
+    duration: 10,
+    delay: 1,
+    opacity: [0.35, 0.5, 0.35],
+    scale: [1, 1.15, 1],
+  },
+  {
+    color: "rgba(188, 167, 232, 0.4)",
+    size: "18rem",
+    position: { bottom: "25%", left: "20%" },
+    duration: 9,
+    delay: 0.5,
+    opacity: [0.3, 0.45, 0.3],
+    scale: [1, 1.1, 1],
+  },
+  {
+    color: "rgba(243, 201, 123, 0.5)",
+    size: "17.5rem",
+    position: { bottom: "2.5rem", right: "10%" },
+    duration: 11,
+    delay: 1.5,
+    opacity: [0.35, 0.5, 0.35],
+    scale: [1, 1.25, 1],
+  },
+];
+
 export function Purpose() {
   return (
     <section id="purpose" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Warm gradient background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#FBF6F2] via-[#FFF5ED] to-[#FBF6F2]" />
+      <div className="absolute inset-0 z-0 section-bg-warm" />
 
       {/* Soft directional overlay */}
-      <div
-        className="absolute inset-0 z-[1] opacity-40"
-        style={{
-          background: "linear-gradient(110deg, rgba(253, 240, 230, 0.6) 0%, rgba(255, 248, 242, 0.4) 50%, transparent 100%)",
-        }}
-      />
+      <div className="absolute inset-0 z-[1] section-overlay" />
 
       {/* Playful floating shapes */}
-      <div className="absolute inset-0 z-[2] opacity-25">
-        <motion.div
-          className="absolute top-10 left-[10%] w-64 h-64 rounded-full blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(247, 123, 114, 0.5), transparent)' }}
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-1/4 right-[15%] w-80 h-80 rounded-full blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(145, 181, 156, 0.45), transparent)' }}
-          animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.5, 0.35] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-[20%] w-72 h-72 rounded-full blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(188, 167, 232, 0.4), transparent)' }}
-          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.45, 0.3] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        />
-        <motion.div
-          className="absolute bottom-10 right-[10%] w-70 h-70 rounded-full blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(243, 201, 123, 0.5), transparent)' }}
-          animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.5, 0.35] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-        />
-      </div>
+      <FloatingShapes shapes={floatingShapes} />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+        <SectionHeading
+          highlightedWord="Matters"
+          subtitle="The world needs more makers, not just consumers."
         >
-          <h2 className="mb-6 text-4xl sm:text-5xl lg:text-6xl" style={{ fontFamily: 'var(--font-serif)', fontWeight: 600, lineHeight: 1.15 }}>
-            <span style={{ color: '#1E3A5F' }}>Why it </span>
-            <span className="relative inline-block">
-              <span
-                style={{
-                  background: 'linear-gradient(90deg, #E8495F 0%, #D63447 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Matters
-              </span>
-              <motion.span
-                className="absolute -bottom-2 left-0 h-2 rounded-full -rotate-1"
-                style={{
-                  background: 'rgba(214, 52, 71, 0.35)',
-                  width: '100%',
-                }}
-                initial={{ scaleX: 0, originX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              />
-            </span>
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ fontFamily: 'var(--font-sans)', color: '#5A3D3A', lineHeight: 1.7 }}>
-            The world needs more makers, not just consumers.
-          </p>
-        </motion.div>
+          Why it Matters
+        </SectionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {points.map((point, index) => {
@@ -134,8 +114,7 @@ export function Purpose() {
                 transition={{ duration: 0.6, delay: index * 0.08 }}
               >
                 {/* Clean card */}
-                <div className="relative h-full bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-md hover:shadow-lg transition-all duration-300">
-
+                <div className="card-glass relative h-full p-8">
                   {/* Simple icon */}
                   <div className="mb-5">
                     <div
@@ -147,10 +126,10 @@ export function Purpose() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-4 text-xl" style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: '#1E3A5F', lineHeight: 1.3 }}>
+                  <h3 className="mb-4 text-xl" style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--color-text-blue)', lineHeight: 1.3 }}>
                     {point.title}
                   </h3>
-                  <p style={{ fontFamily: 'var(--font-sans)', color: '#7A6F67', lineHeight: 1.7 }}>
+                  <p style={{ fontFamily: 'var(--font-sans)', color: 'var(--muted-foreground)', lineHeight: 1.7 }}>
                     {point.description}
                   </p>
                 </div>
