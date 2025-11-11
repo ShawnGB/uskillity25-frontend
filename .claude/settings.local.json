@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nrefactor(styles): consolidate CSS and extract reusable components\n\n- Remove 98 lines of unused CSS variables (dark mode, sidebar, charts, popovers, cards)\n- Add 9 utility classes for common patterns (gradients, backgrounds, cards)\n- Extract FloatingShapes and SectionHeading as shared components\n- Replace 30+ hardcoded colors with CSS variables across all components\n- Replace inline font-family strings with CSS variable references\n- Merge duplicate button variants (secondary/outline)\n- Apply DRY principles to Purpose and CreativeRealms sections\n\nNet result: -89 lines, improved maintainability and consistency\nEOF\n)\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "figma"
+  ]
+}
